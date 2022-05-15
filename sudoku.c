@@ -184,6 +184,7 @@ Node* DFS(Node* initial, int* cont)
     {
       aux = next(adj);
       push(stk , aux);
+      print_node(n);
     }
     printf("se inicia otra iteracion\n");
   }
