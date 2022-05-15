@@ -164,6 +164,7 @@ Node* DFS(Node* initial, int* cont)
   push(stk , initial);
   while (get_size(stk) != 0)
   {
+    printf("pene\n");
     Node * n = top(stk);
     pop(stk);
     if (is_final(n) == 1)
