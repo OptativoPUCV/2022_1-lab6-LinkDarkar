@@ -165,7 +165,6 @@ Node* DFS(Node* initial, int* cont)
   while (get_size(stk) != 0)
   {
     Node * n = top(stk);
-    print_node(n);
     pop(stk);
     if (is_final(n) == 1)
     {
