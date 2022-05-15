@@ -167,7 +167,7 @@ Node* DFS(Node* initial, int* cont)
   {
     printf("pene\n");
     Node * n = top(stk);
-    printf("pene1\n");
+    print_node(n);
     pop(stk);
     printf("pene2\n");
     if (is_final(n) == 1)
