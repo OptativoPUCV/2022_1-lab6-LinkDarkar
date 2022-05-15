@@ -123,3 +123,9 @@ sá., 14 de may. de 2022 22:49:25:
  tests:  2|4
 total_score: 15/70
 bd86fb7
+sá., 14 de may. de 2022 22:50:40: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  2|4
+total_score: 15/70
+f2995f3

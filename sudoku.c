@@ -62,6 +62,7 @@ int is_valid(Node* n)
 
       if (fila[nro] == 1)
       {
+        printf("el numero que se repite es %i en la fila %i %i", nro , f , k);
         return 0;
       }
     }
