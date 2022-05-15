@@ -64,3 +64,9 @@ sudoku.c:77:7: error: statement with no effect [-Werror=unused-value]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 29bcfe3
+sá., 14 de may. de 2022 22:22:45: 
+ sudoku.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  0|5
+total_score: 0/70
+fec5400
