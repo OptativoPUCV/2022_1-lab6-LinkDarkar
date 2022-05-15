@@ -189,3 +189,8 @@ do., 15 de may. de 2022  0:01:31:
  1 file changed, 3 deletions(-)
  tests:  0|0
 ba55e73
+do., 15 de may. de 2022  0:01:53: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  0|0
+c3a945f
