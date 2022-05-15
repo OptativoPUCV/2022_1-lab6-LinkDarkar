@@ -57,7 +57,6 @@ int is_valid(Node* n)
       nro = n->sudo[f][k];
       if (fila[nro] == 1)
       {
-        printf("el numero que se repite es %i en la fila %i %i\n", nro , f , k);
         return 0;
       }
 
@@ -86,6 +85,8 @@ int is_valid(Node* n)
     }
   }
 
+
+
   return 1;
 }
 
@@ -105,7 +106,10 @@ List* get_adj_nodes(Node* n)
           adj_n = copy(n);
           adj_n->sudo[f][k] = cont;
           printf("el adj_n en la pos %i %i es = a %i\n", f , k , cont);
-          pushBack(list , adj_n);
+          if (is_valid(adj_n) == 1)
+          {
+            pushBack(list , adj_n);
+          }
         }
         return list;  //si solo se pide el primer nodo vacio hay que dejar esto
                       //pero si pide todos los nodos vacios hay que quitarlo y ya esta
