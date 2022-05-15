@@ -182,9 +182,9 @@ Node* DFS(Node* initial, int* cont)
     int size = get_size(adj);
     for (int cont = 0 ; cont < size ; cont++)
     {
-      aux = next(adj);
       push(stk , aux);
       print_node(aux);
+      aux = next(adj);
     }
     printf("se inicia otra iteracion\n");
   }
