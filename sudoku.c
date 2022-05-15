@@ -66,7 +66,7 @@ List* get_adj_nodes(Node* n)
           printf("el adj_n en la pos %i %i es = a %i\n", f , k , cont);
           pushBack(list , adj_n);
         }
-        break;
+        return list;
       }
     }
   }
