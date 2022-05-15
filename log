@@ -50,3 +50,17 @@ sá., 14 de may. de 2022 22:21:14:
  tests:  0|5
 total_score: 0/70
 7ba7530
+sá., 14 de may. de 2022 22:22:11: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:75:5: error: statement with no effect [-Werror=unused-value]
+     for (f ; f <= 8 ; f++)
+     ^~~
+sudoku.c:77:7: error: statement with no effect [-Werror=unused-value]
+       for (k ; k <= 8 ; k++)
+       ^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+29bcfe3
