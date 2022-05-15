@@ -90,9 +90,9 @@ int is_valid(Node* n)
     for (int k = 0 ; k <= 6 ; k += 3)
     {
       int *subm = (int *) calloc (10 , sizeof(int));
-      for (int subF = f ; subF <= f + 3 ; subF++)
+      for (int subF = f ; subF <= f + 2 ; subF++)
       {
-        for (int subK = k ; subK <= k + 3 ; subK++)
+        for (int subK = k ; subK <= k + 2 ; subK++)
         {
           nro = n->sudo[subF][subK];
           if (subm[nro] == 1)
