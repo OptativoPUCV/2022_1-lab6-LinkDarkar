@@ -236,3 +236,9 @@ do., 15 de may. de 2022  0:13:47:
  tests:  10|0
 total_score: 70/70
 b0dbbe3
+do., 15 de may. de 2022  0:14:24: 
+ sudoku.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  10|0
+total_score: 70/70
+04c4fe8
