@@ -275,3 +275,16 @@ sudoku.c:192:5: note: previous definition of 'main' was here
      ^~~~
 Compilation failed
 ed9568d
+do., 15 de may. de 2022  0:20:05: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:164:7: error: 'cont' redeclared as different kind of symbol
+   int cont = 0;
+       ^~~~
+sudoku.c:161:31: note: previous definition of 'cont' was here
+ Node* DFS(Node* initial, int* cont)
+                               ^~~~
+Compilation failed
+448b50e
