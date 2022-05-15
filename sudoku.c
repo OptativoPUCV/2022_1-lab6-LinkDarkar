@@ -174,10 +174,12 @@ Node* DFS(Node* initial, int* cont)
 
     List * adj = get_adj_nodes(n);
     int size = get_size(adj);
+    aux = front(adj);
     for (int cont = 0 ; cont < size ; cont++)
     {
-      aux = front(adj);
+      aux = next(adj);
       push(stk , aux);
+
     }
       
     free(n);
