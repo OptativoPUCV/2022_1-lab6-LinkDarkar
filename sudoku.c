@@ -169,6 +169,7 @@ Node* DFS(Node* initial, int* cont)
     pop(stk);
     if (is_final(n) == 1)
     {
+      printf("iterations: %i\n", Cont);
       return n;
     }
     List * adj = get_adj_nodes(n);
@@ -182,7 +183,6 @@ Node* DFS(Node* initial, int* cont)
     Cont += 1;
   }
 
-  printf("iterations: %i\n", Cont);
   return NULL;
 }
 
