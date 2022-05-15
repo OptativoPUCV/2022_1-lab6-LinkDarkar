@@ -149,7 +149,7 @@ int is_final(Node* n)
     {
       if (n->sudo[f][k] == 0)
       {
-        printf("la posicion que se esta viendo es %i %i\n", f , k);
+        //printf("la posicion que se esta viendo es %i %i\n", f , k);
         return 0;
       }
     }
@@ -161,7 +161,7 @@ int is_final(Node* n)
 Node* DFS(Node* initial, int* cont)
 {
   Stack * stk = createStack();
-  int cont = 0;
+  int Cont = 0;
   push(stk , initial);
   while (get_size(stk) != 0)
   {
@@ -179,10 +179,10 @@ Node* DFS(Node* initial, int* cont)
       push(stk , aux);
       aux = next(adj);
     }
-    cont += 1;
+    Cont += 1;
   }
 
-  printf("iterations: %i\n", cont);
+  printf("iterations: %i\n", Cont);
   return NULL;
 }
 

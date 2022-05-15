@@ -288,3 +288,9 @@ sudoku.c:161:31: note: previous definition of 'cont' was here
                                ^~~~
 Compilation failed
 448b50e
+do., 15 de may. de 2022  0:21:07: 
+ sudoku.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  10|0
+total_score: 70/70
+a5af0bb
