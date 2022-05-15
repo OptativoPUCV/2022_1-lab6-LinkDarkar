@@ -55,15 +55,15 @@ int is_valid(Node* n)
     for (int k = 0 ; k <= 8 ; k++)
     {
       nro = n->sudo[f][k];
+      if (fila[nro] == 1)
+      {
+        printf("el numero que se repite es %i en la fila %i %i\n", nro , f , k);
+        return 0;
+      }
+
       if (fila[nro] == 0 && nro != 0)
       {
         fila[nro] = 1;
-      }
-
-      if (fila[nro] == 1)
-      {
-        printf("el numero que se repite es %i en la fila %i %i", nro , f , k);
-        return 0;
       }
     }
   }
@@ -74,14 +74,14 @@ int is_valid(Node* n)
     for (int f = 0 ; f <= 8 ; f++)
     {
       nro = n->sudo[f][k];
-      if (col[nro] == 0 && nro != 0)
-      {
-        col[nro] = 1;
-      }
-
       if (col[nro] == 1)
       {
         return 0;
+      }
+
+      if (col[nro] == 0 && nro != 0)
+      {
+        col[nro] = 1;
       }
     }
   }
