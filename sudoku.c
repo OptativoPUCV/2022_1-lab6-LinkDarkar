@@ -51,7 +51,7 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
     List* list=createList();
-
+/* funciona
     for (int f = 0 ; f <= 8 ; f++)
     {
       for (int k = 0 ; k <= 8 ; k++)
@@ -68,6 +68,28 @@ List* get_adj_nodes(Node* n){
           }
         }
       }
+    }
+*/
+  int f = 0;
+  int k = 0;
+    for (f = 0 ; f <= 8 ; f++)
+    {
+      for (k = 0 ; k <= 8 ; k++)
+      {
+        if (n->sudo[f][k] == 0)
+        {
+          break;
+        }
+      }
+    }
+
+    for (int cont = 1 ; cont <= 9 ; cont++)
+    {
+      Node *adj_n = (Node *) malloc(sizeof(Node));
+      adj_n = copy(n);
+      adj_n->sudo[f][k] = cont;
+      printf("el adj_n en la pos %i %i es = a %i\n", f , k , cont);
+      pushBack(list , adj_n);
     }
     
   return list;
