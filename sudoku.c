@@ -85,7 +85,29 @@ int is_valid(Node* n)
     }
   }
 
+  for (int f = 0 ; f <= 6 ; f += 3)
+  {
+    for (int k = 0 ; k <= 6 ; k += 3)
+    {
+      int *subm = (int *) calloc (10 , sizeof(int));
+      for (int subF = f ; subF <= f + 3 ; subF++)
+      {
+        for (int subK = k ; subK <= k + 3 ; subK++)
+        {
+          nro = n->sudo[subF][subK];
+          if (subm[nro] == 1)
+          {
+            return 0;
+          }
 
+          if (subm[nro] == 0 && nro != 0)
+          {
+            subm[nro] = 1;
+          }
+        }
+      }
+    }
+  }
 
   return 1;
 }
@@ -93,7 +115,7 @@ int is_valid(Node* n)
 
 List* get_adj_nodes(Node* n)
 {
-  List* list=createList();
+  List* list = createList();
   for (int f = 0 ; f <= 8 ; f++)
   {
     for (int k = 0 ; k <= 8 ; k++)
