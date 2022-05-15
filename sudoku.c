@@ -149,6 +149,7 @@ int is_final(Node* n)
     {
       if (n->sudo[f][k] == 0)
       {
+        printf("la posicion que se esta viendo es %i %i\n", f , k);
         return 0;
       }
     }
