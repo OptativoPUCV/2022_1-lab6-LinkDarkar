@@ -143,6 +143,7 @@ List* get_adj_nodes(Node* n)
 
 int is_final(Node* n)
 {
+  print_node(n);
   for (int f = 0 ; f <= 8 ; f++)
   {
     for (int k = 0 ; k <= 8 ; k++)
