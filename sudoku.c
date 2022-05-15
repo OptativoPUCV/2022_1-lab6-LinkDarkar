@@ -165,18 +165,13 @@ Node* DFS(Node* initial, int* cont)
   push(stk , initial);
   while (get_size(stk) != 0)
   {
-    printf("pene\n");
     Node * n = top(stk);
     print_node(n);
     pop(stk);
-    printf("pene2\n");
     if (is_final(n) == 1)
     {
-      printf("pene3\n");
       return n;
     }
-    printf("pene4\n");
-    printf("se pasa a sacar el adj\n");
     List * adj = get_adj_nodes(n);
     Node * aux = front(adj);
     int size = get_size(adj);
@@ -186,7 +181,7 @@ Node* DFS(Node* initial, int* cont)
       print_node(aux);
       aux = next(adj);
     }
-    printf("se inicia otra iteracion\n");
+    cont += 1;
   }
 
   return NULL;
