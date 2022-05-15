@@ -166,12 +166,15 @@ Node* DFS(Node* initial, int* cont)
   {
     printf("pene\n");
     Node * n = top(stk);
+    printf("pene1\n");
     pop(stk);
+    printf("pene2\n");
     if (is_final(n) == 1)
     {
+      printf("pene3\n");
       return n;
     }
-
+    printf("pene4\n");
     printf("se pasa a sacar el adj\n");
     List * adj = get_adj_nodes(n);
     Node * aux = front(adj);
