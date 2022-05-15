@@ -69,7 +69,7 @@ List* get_adj_nodes(Node* n){
     {
       Node *adj_n = (Node *) malloc(sizeof(Node));
       adj_n = copy(n);
-      adj_n->sudo[f][k] = cont;
+      adj_n->sudo[f][k] = cont + 1;
       pushBack(list , adj_n);
     }
   return list;
