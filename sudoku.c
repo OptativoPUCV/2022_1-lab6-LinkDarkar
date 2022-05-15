@@ -45,9 +45,6 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
-  //int *fila = (int *) calloc (10 , sizeof(int));
-  //int *col = (int *) calloc (10 , sizeof(int));
-  //int *subm = (int *) calloc (10 , sizeof(int));
   int nro = 0;
   for (int f = 0 ; f <= 8 ; f++)
   {
@@ -85,6 +82,7 @@ int is_valid(Node* n)
     }
   }
 
+  //podria haber usado lo que propuso el profesor pero bueno
   for (int f = 0 ; f <= 6 ; f += 3)
   {
     for (int k = 0 ; k <= 6 ; k += 3)
@@ -127,7 +125,7 @@ List* get_adj_nodes(Node* n)
           Node *adj_n = (Node *) malloc(sizeof(Node));
           adj_n = copy(n);
           adj_n->sudo[f][k] = cont;
-          printf("el adj_n en la pos %i %i es = a %i\n", f , k , cont);
+          //printf("el adj_n en la pos %i %i es = a %i\n", f , k , cont);
           if (is_valid(adj_n) == 1)
           {
             pushBack(list , adj_n);
@@ -143,8 +141,20 @@ List* get_adj_nodes(Node* n)
 }
 
 
-int is_final(Node* n){
-    return 0;
+int is_final(Node* n)
+{
+  for (int f = 0 ; f <= 8 ; f++)
+  {
+    for (int k = 0 ; k <= 8 ; k++)
+    {
+      if (n->sudo[f][k] == 0)
+      {
+        return 0;
+      }
+    }
+  }
+  
+  return 1;
 }
 
 Node* DFS(Node* initial, int* cont){
