@@ -157,7 +157,33 @@ int is_final(Node* n)
   return 1;
 }
 
-Node* DFS(Node* initial, int* cont){
+Node* DFS(Node* initial, int* cont)
+{
+  Stack * stk = createStack();
+  Node * n;
+  Node * aux;
+  push(stk , initial);
+  while (stk != NULL)
+  {
+    n = top(stk);
+    pop(stk);
+    if (is_final(n) == 1)
+    {
+      return n;
+    }
+
+    List * adj = get_adj_nodes(n);
+    int size = get_size(adj);
+    for (int cont = 0 ; cont < size ; cont++)
+    {
+      aux = front(adj);
+      push(stk , aux);
+    }
+      
+    free(n);
+    free(aux);
+  }
+
   return NULL;
 }
 
