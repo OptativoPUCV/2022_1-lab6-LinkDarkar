@@ -161,26 +161,24 @@ int is_final(Node* n)
 Node* DFS(Node* initial, int* cont)
 {
   Stack * stk = createStack();
-  Node * n;
-  Node * aux;
   push(stk , initial);
   while (get_size(stk) != 0)
   {
-    n = top(stk);
+    Node * n = top(stk);
     pop(stk);
     if (is_final(n) == 1)
     {
       return n;
     }
 
+    printf("se pasa a sacar el adj\n");
     List * adj = get_adj_nodes(n);
+    Node * aux = front(adj);
     int size = get_size(adj);
-    aux = front(adj);
     for (int cont = 0 ; cont < size ; cont++)
     {
       aux = next(adj);
       push(stk , aux);
-
     }
       
     free(n);
