@@ -69,7 +69,8 @@ List* get_adj_nodes(Node* n){
     {
       Node *adj_n = (Node *) malloc(sizeof(Node));
       adj_n = copy(n);
-      adj_n->sudo[f][k] = cont + 1;
+      adj_n->sudo[f][k] = cont;
+      printf("el adj_n en la pos %i %i es = a %i", f , k , cont);
       pushBack(list , adj_n);
     }
   return list;
