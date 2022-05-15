@@ -4,3 +4,13 @@ sá., 14 de may. de 2022 22:11:48:
  tests:  0|5
 total_score: 0/70
 e909da3
+sá., 14 de may. de 2022 22:13:03: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:71:19: error: assignment to expression with array type
+       adj_n->sudo = n->sudo;
+                   ^
+Compilation failed
+6dd5780

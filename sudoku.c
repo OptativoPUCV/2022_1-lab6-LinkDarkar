@@ -68,11 +68,11 @@ List* get_adj_nodes(Node* n){
     for (int cont = 1 ; cont <= 9 ; cont++)
     {
       Node *adj_n = (Node *) malloc(sizeof(Node));
-      adj_n = n;
+      adj_n->sudo = n->sudo;
       adj_n->sudo[f][k] = cont;
       pushBack(list , adj_n);
     }
-    return list;
+  return list;
 }
 
 
