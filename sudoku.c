@@ -180,9 +180,6 @@ Node* DFS(Node* initial, int* cont)
       aux = next(adj);
       push(stk , aux);
     }
-      
-    free(n);
-    free(aux);
   }
 
   return NULL;
