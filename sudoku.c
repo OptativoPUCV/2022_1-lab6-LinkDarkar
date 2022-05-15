@@ -72,15 +72,21 @@ List* get_adj_nodes(Node* n){
 */
   int f = 0;
   int k = 0;
+  int found = 0;
     for (f = 0; f <= 8 ; f++)
     {
       for (k = 0; k <= 8 ; k++)
       {
         if (n->sudo[f][k] == 0)
         {
-          printf("encontrado %i %i", f , k);
+          found = 1;
           break;
         }
+      }
+      
+      if (found == 1)
+      {
+        break;
       }
     }
 
