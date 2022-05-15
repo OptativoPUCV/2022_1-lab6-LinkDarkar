@@ -177,7 +177,6 @@ Node* DFS(Node* initial, int* cont)
     for (int cont = 0 ; cont < size ; cont++)
     {
       push(stk , aux);
-      print_node(aux);
       aux = next(adj);
     }
     cont += 1;
