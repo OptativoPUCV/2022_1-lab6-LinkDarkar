@@ -254,3 +254,24 @@ do., 15 de may. de 2022  0:14:57:
  tests:  10|0
 total_score: 70/70
 9af7d9a
+do., 15 de may. de 2022  0:19:54: 
+ sudoku.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:164:7: error: 'cont' redeclared as different kind of symbol
+   int cont = 0;
+       ^~~~
+sudoku.c:161:31: note: previous definition of 'cont' was here
+ Node* DFS(Node* initial, int* cont)
+                               ^~~~
+test.c: At top level:
+test.c:245:5: error: redefinition of 'main'
+ int main( int argc, char *argv[] ) {
+     ^~~~
+In file included from test.c:5:0:
+sudoku.c:192:5: note: previous definition of 'main' was here
+ int main( int argc, char *argv[] ){
+     ^~~~
+Compilation failed
+ed9568d

@@ -161,6 +161,7 @@ int is_final(Node* n)
 Node* DFS(Node* initial, int* cont)
 {
   Stack * stk = createStack();
+  int cont = 0;
   push(stk , initial);
   while (get_size(stk) != 0)
   {
@@ -181,12 +182,13 @@ Node* DFS(Node* initial, int* cont)
     cont += 1;
   }
 
+  printf("iterations: %i\n", cont);
   return NULL;
 }
 
 
 
-/*
+
 int main( int argc, char *argv[] ){
 
   Node* initial= read_file("s12a.txt");;
@@ -197,4 +199,4 @@ int main( int argc, char *argv[] ){
   print_node(final);
 
   return 0;
-}*/
+}
