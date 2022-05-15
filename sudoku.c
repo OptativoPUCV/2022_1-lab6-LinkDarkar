@@ -43,7 +43,8 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
+int is_valid(Node* n)
+{
 
     return 1;
 }
@@ -66,12 +67,13 @@ List* get_adj_nodes(Node* n)
           printf("el adj_n en la pos %i %i es = a %i\n", f , k , cont);
           pushBack(list , adj_n);
         }
-        return list;
+        return list;  //si solo se pide el primer nodo vacio hay que dejar esto
+                      //pero si pide todos los nodos vacios hay que quitarlo y ya esta
       }
     }
   }
 
-  //return list;
+  return list;
 }
 
 
