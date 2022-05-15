@@ -45,8 +45,47 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
+  //int *fila = (int *) calloc (10 , sizeof(int));
+  //int *col = (int *) calloc (10 , sizeof(int));
+  //int *subm = (int *) calloc (10 , sizeof(int));
+  int nro = 0;
+  for (int f = 0 ; f <= 8 ; f++)
+  {
+    int *fila = (int *) calloc (10 , sizeof(int));
+    for (int k = 0 ; k <= 8 ; k++)
+    {
+      nro = n->sudo[f][k];
+      if (fila[nro] == 0 && nro != 0)
+      {
+        fila[nro] = 1;
+      }
 
-    return 1;
+      if (fila[nro] == 1)
+      {
+        return 0;
+      }
+    }
+  }
+
+  for (int k = 0 ; k <= 8 ; k++)
+  {
+    int *col = (int *) calloc (10 , sizeof(int));
+    for (int f = 0 ; f <= 8 ; f++)
+    {
+      nro = n->sudo[f][k];
+      if (col[nro] == 0 && nro != 0)
+      {
+        col[nro] = 1;
+      }
+
+      if (col[nro] == 1)
+      {
+        return 0;
+      }
+    }
+  }
+
+  return 1;
 }
 
 
